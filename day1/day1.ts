@@ -12,11 +12,13 @@ let numericArrayedData = arrayedData.map((e:string)=>parseInt(e));
 
 const totalAmount:number = 2020;
 
-numericArrayedData.forEach((e:number )=>{
+//prints day 1
+numericArrayedData.forEach((e:number,i:number )=>{
     const searchValue:number = totalAmount - e;
-    const result:number = arrayedData.indexOf(searchValue.toString()); 
+    const result:number = arrayedData.indexOf(searchValue.toString(),i+1); 
     if(result > -1){
         console.log(e*numericArrayedData[result])
     }
 })
  
+//day 2
