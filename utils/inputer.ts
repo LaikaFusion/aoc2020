@@ -12,6 +12,6 @@ export const getInput = (filePath:string):string => {
 
 export const breakOnLine = (fsResult:string):Array<string> => {
   const arrayedData:Array<string> = fsResult.split('\n');
-  arrayedData.pop();
+  // arrayedData.pop();
   return arrayedData;
 };
