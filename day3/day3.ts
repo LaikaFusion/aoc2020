@@ -7,7 +7,7 @@ const tree = '#';
 
 const treeCounter = (vertDistance, horiDistance) => {
   let horiCounter = 0;
-  let treeCounter = 0;
+  let treeCounterTotal = 0;
 
   // part 1, the loop
   for (let index = vertDistance; index < doubleSplitData.length; index += vertDistance) {
@@ -17,12 +17,12 @@ const treeCounter = (vertDistance, horiDistance) => {
       horiCounter -= element.length;
     }
     if (element[horiCounter] === tree) {
-      treeCounter += 1;
+      treeCounterTotal += 1;
     }
   }
-  console.log(treeCounter);
+  console.log(treeCounterTotal);
 
-  return treeCounter;
+  return treeCounterTotal;
 };
 
 const toFind:Array<Array<number>> = [[1, 1], [1, 3], [1, 5], [1, 7], [2, 1]];
