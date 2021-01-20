@@ -18,3 +18,10 @@ inputData.forEach((element) => {
   holdingArr.push(total);
 });
 console.log(Math.max(...holdingArr));
+
+holdingArr.sort().forEach((curNum, iterator) => {
+  const nextNum = holdingArr[iterator + 1];
+  if (iterator !== holdingArr.length - 1 && (nextNum - curNum > 1)) {
+    console.log(curNum, nextNum);
+  }
+});
